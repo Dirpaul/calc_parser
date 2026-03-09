@@ -1,9 +1,11 @@
 #pragma once
-//#include "main.h"
 #include <iostream>
 #include <string>
 #include <iomanip>
 #include <vector>
+#include <utility>
+#include <algorithm>
+#include <iterator>
 
 using namespace std;
 

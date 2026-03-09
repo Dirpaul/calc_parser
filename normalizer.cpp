@@ -1,5 +1,5 @@
 #include "normalizer.h"
-#include "functions.h"
+#include "Functions.h"
 
 //normalizer correct expression for mathematical representation
 // 8(32+3)5cos(3) -> 8*(32+3)* 5 * cos(3)

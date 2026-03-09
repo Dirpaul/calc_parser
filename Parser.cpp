@@ -1,4 +1,4 @@
-#include "parser.h"
+#include "Parser.h"
 #include "Functions.h"
 
 parser::parser(const EquationLexer& e,const Functions* f)try : el(e),fu(f),

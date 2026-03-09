@@ -1,6 +1,8 @@
 #pragma once
 #include "main.h"
 #include "EquationLexer.h"
+#include <memory>
+#include <cmath>
 
 class Node {
 public:

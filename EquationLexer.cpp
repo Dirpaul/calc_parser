@@ -1,4 +1,8 @@
 #include "EquationLexer.h"
+#include <iterator>
+#include <string>
+#include <utility>
+#include <algorithm>
 
 void EquationLexer::throwing(const string& s, char arg, const string* num) const {
 	throw runtime_error("lexem: " + s + (arg?" \t\"" + string(1,arg) + "\"[" + to_string(arg)+ "]":"") + (num?"\"" + *num + "\"" : ""));

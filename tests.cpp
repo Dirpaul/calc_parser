@@ -1,5 +1,5 @@
 #include "main.h"
-#include "parser.h"
+#include "Parser.h"
 #include "Functions.h"
 #include "normalizer.h"
 #include "EquationLexer.h"
@@ -58,7 +58,7 @@ void ex2(){
 			//EquationLexer l1{ s };
 			cout << "212#####(" << s << ")**************" << endl;
 			//l1.show_lexems();
-			parser p1({ s });//parser p1(l1); //add move
+			parser p1{ s };//parser p1(l1); //add move
 			
 		}
 		catch (runtime_error re) {}
