@@ -21,7 +21,6 @@ unique_ptr<Node> parser::expr() {// (-2 + 4) * 5^2
 	unique_ptr<Node> left = term(), right;
 	while (current != end) {
 		if (current->kind == close || current->kind == comm) return left;
-		//if (current->kind == comm) return left;
 		if (current->kind == oper && (current->value == "+" || current->value == "-")) {
 			Token tmp_curr = *current;
 			next();
@@ -84,6 +83,7 @@ unique_ptr<Node> parser::primary() {
 		else  throwing("primary() wrong, unexpected", &current->value);
 	}
 	else throwing("primary(), unexpecting end of an expression");
+	return make_unique<Node>();
 }
 unique_ptr<Node> parser::function() {
 	pair<double (*)(const vector<double>), int> fu_pair = fu->get(current->value);
@@ -102,6 +102,7 @@ unique_ptr<Node> parser::function() {
 		}
 	}
 	throwing("primary(), expected '(' after function name");
+	return make_unique<Node>();
 }
 
 

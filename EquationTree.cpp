@@ -1,37 +1,6 @@
 
 #include "EquationTree.h"
 
-/*EquationTree::EquationTree() :kind(none), operation({}), value(0),
-	arg_list(vector<unique_ptr<EquationTree>>()) {}
-EquationTree::EquationTree(const Token& tok):kind(tok.kind),operation({}),
-	value(0),arg_list(vector<unique_ptr<EquationTree>>()){
-	switch (kind) {
-	case none:
-		break;
-	case num:
-		value = stod(tok.value);
-		break;
-	case oper:
-		oper 
-		break;
-	case word:
-		break;
-	case open:
-		break;
-	case close:
-		break;
-	}
-}
-
-EquationTree* EquationTree::left() {
-	if (!arg_list.empty())  return arg_list[0].get();
-	return nullptr;
-}
-EquationTree* EquationTree::right() {
-	if (arg_list.size() > 1) return arg_list[1].get();
-	return nullptr;
-}*/
-
 double Node::eval() { return 0; }
 NumberNode::NumberNode(const string& s): value(stod(s)){}
 double NumberNode::eval() {return value;}
